@@ -1,6 +1,6 @@
 const express = require('express')
 
-app.set('port',process.env.PORT)
+app.set('port',process.env.PORT || 3000)
 
 const app = express()
 
