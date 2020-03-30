@@ -1,11 +1,13 @@
 const express = require('express')
 
+app.set('port',process.env.PORT)
+
 const app = express()
 
 app.get('/',(req,res)=>{
     res.send('Hola Mundo')
 })
 
-app.listen(3000,()=>{
-    console.log("Servidor iniciado en el puerto 3000");
+app.listen(app.get('port'),()=>{
+    console.log(`App iniciado en el puerto ${app.get('port')}`);
 })
