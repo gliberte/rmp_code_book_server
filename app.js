@@ -1,8 +1,8 @@
 const express = require('express')
 
-app.set('port',process.env.PORT || 3000)
-
 const app = express()
+
+app.set('port',process.env.PORT || 3000)
 
 app.get('/',(req,res)=>{
     res.send('Hola Mundo')
