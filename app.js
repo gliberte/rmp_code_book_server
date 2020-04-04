@@ -1,11 +1,15 @@
 const express = require('express')
-
 const app = express()
+
+const api = require('./api')
 
 app.set('port',process.env.PORT || 3000)
 
-app.get('/',(req,res)=>{
-    res.send('Hola Mundo')
+app.use('/api',api)
+app.use((req,res)=>{
+    res.status(404).json({
+        mensaje:'Recurso no encontrado'
+    })
 })
 
 app.listen(app.get('port'),()=>{
