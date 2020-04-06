@@ -5,7 +5,7 @@ module.exports = data => {
     type: "FeatureCollection",
     features: data.map(item => ({
       type: "Feature",
-      geometry: item.geom,
+      geometry: JSON.parse(item.geom),
       properties: _.omit(item, ["geom"])
     }))
   };
