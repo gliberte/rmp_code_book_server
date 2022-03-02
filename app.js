@@ -6,7 +6,7 @@ const app = express()
 
 const api = require('./api')
 
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 8000)
 
 app.use(cors())
 app.use('/api',api)
