@@ -6,11 +6,11 @@ db.init()
 exports.paises =  ()=>{
     const sql_sentence = `
         SELECT id,
-        "Country_Region" as pais,
-        "Last_Update" as fecha,
-        "Confirmed" as confirmados,
-        "Deaths" as muertes,
-        "Recovered" as recuperados,
+        country_region as pais,
+        last_update as fecha,
+        confirmed as confirmados,
+        deaths as muertes,
+        recovered as recuperados,
         st_asgeojson(geom) as geom from cases_country
     `
     return db.query(sql_sentence)

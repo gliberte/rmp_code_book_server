@@ -8,14 +8,15 @@
     "start": "node app.js"
   },
   "engine": {
-    "node": "12.16.1",
+    "node": "16.13.2",
     "yarn": "1.17.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
+    "global": "^4.4.0",
     "lodash": "^4.17.15",
-    "pg": "^8.0.0"
+    "pg": "^8.7.3"
   },
   "devDependencies": {
     "dotenv": "^8.2.0"

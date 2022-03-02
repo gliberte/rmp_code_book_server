@@ -2,7 +2,7 @@ const express = require('express')
 const {paises,paisesComoPoligonos} = require('../db/covidApi')
 const {estados,listEstados,tornadosPorEstadoId} = require('../db/tornadosApi')
 const api = express.Router()
-const togeojson = require('./togeojson')
+const togeojson = require('../utils/togeojson')
 
 api.get('/paises',async (req,res)=>{
     const results = await paises()
